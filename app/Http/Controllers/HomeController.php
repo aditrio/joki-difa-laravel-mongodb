@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Jadwal;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,23 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function dash()
+    {
+        $siswa = User::where('role',"siswa")->get();
+        $jadwal = Jadwal::all();
+
+        return view('dash-guru' , ['siswa' => $siswa, 'jadwal' => $jadwal]);
+    }
+
+    public function jadwal()
+    {
+        return view('jadwal-guru');
+    }
+
+    public function absensi()
+    {
+        return view('absensi-guru');
     }
 }

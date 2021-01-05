@@ -13,10 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
+Route::get('/', 'HomeController@dash')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@dash')->name('home');
+Route::get('/dash-guru', 'HomeController@dash')->name('dash');
+Route::get('/absensi-guru', 'AbsensiController@index');
+Route::get('/jadwal-guru', 'JadwalController@index');
+
+
+Route::post('/jadwal/store', 'JadwalController@store')->name('store.jadwal');
+Route::put('/jadwal/{id}/update', 'JadwalController@update')->name('update.jadwal');
+Route::delete('/jadwal/{id}/delete', 'JadwalController@destroy')->name('delete.jadwal');
+
+
+
