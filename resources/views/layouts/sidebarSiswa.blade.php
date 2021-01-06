@@ -19,10 +19,6 @@
                         Data
                     </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jadwal-guru" ><i class="fas fa-fw fa-calendar mb-1"></i>Jadwal</a>
-                        
-                    </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" href="/absensi" ><i class="fas fa-fw fa-book mb-1"></i>Absensi</a>

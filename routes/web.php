@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-Route::get('/', 'HomeController@dash')->name('home');
+Route::get('/', 'HomeController@dash');
 
 Route::get('/home', 'HomeController@dash')->name('home');
-Route::get('/dash-guru', 'HomeController@dash')->name('dash');
-Route::get('/absensi-guru', 'AbsensiController@index');
+Route::get('/dash', 'HomeController@dash')->name('dash');
+
+
+Route::get('/absensi', 'AbsensiController@index');
+Route::put('/submit/absensi/{nama}/{id}', 'AbsensiController@absen');
+
 Route::get('/jadwal-guru', 'JadwalController@index');
 
 

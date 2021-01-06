@@ -19,8 +19,10 @@
             <li class="list-group-item bg-dark">
                 <h3 class="text-light">Kelas : {{$item->kelas}} || <small>{{$item->tanggal}}</small></h3> 
             </li>
-            @foreach ($item->testArray as $i)
-            <li class="list-group-item">{{$i}}</li>
+            @foreach ($item->testArray as $i => $name)
+            <li class="list-group-item">
+                <h4>{{$i + 1}} | <span class="ml-2">{{$name}}</span> </h4>
+            </li>
             @endforeach
            
             

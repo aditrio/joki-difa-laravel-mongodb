@@ -13,8 +13,8 @@
                 @method('PUT')
                 @csrf
                 <div class="form-group">
-                  <label for="kelas-edit">Kelas</label>
-                  <input type="text" class="form-control" id="kelas-edit"   name="kelas" placeholder="Kelas">
+                  <label for="kelas-edit">Mata Pelajaran</label>
+                  <input type="text" class="form-control" id="kelas-edit"   name="kelas" placeholder="Mata Pelajaran">
                   
                 </div>
                 <div class="form-group">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Jadwal;
 
@@ -30,10 +31,24 @@ class HomeController extends Controller
 
     public function dash()
     {
+
+        
+        if (Auth::user()->role == "siswa") {
+            
+           return $this->dashSiswa();
+        }
+
         $siswa = User::where('role',"siswa")->get();
         $jadwal = Jadwal::all();
 
         return view('dash-guru' , ['siswa' => $siswa, 'jadwal' => $jadwal]);
+    }
+
+    public function dashSiswa()
+    {
+        $jadwal = Jadwal::all();
+        return view('dash-siswa' , ['jadwal' => $jadwal]);
+
     }
 
     public function jadwal()

@@ -20,7 +20,7 @@
                 @csrf
                 <div class="form-group mb-2">
                   
-                  <input type="text" name="kelas" class="form-control" id="inputkelas" placeholder="Kelas">
+                  <input type="text" name="kelas" class="form-control" id="inputkelas" placeholder="Mata Pelajaran">
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                   
@@ -40,7 +40,7 @@
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Kelas</th>
+                    <th scope="col">Mata Pelajaran</th>
                     <th scope="col">Tanggal</th>
                     <th scope="col">Kehadiran</th>
                     <th scope="col">Actions</th>

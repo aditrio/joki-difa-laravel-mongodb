@@ -40,3 +40,34 @@ $('.btn-edit').click(function () {
      var $data_id = $row.find("td:nth-child(2)");
      $('#form-delete').attr('action' ,'/jadwal/'+$data_id.text()+'/delete');
  });
+
+
+ $(document).ready(function () {
+
+
+    $('.status-kehadiran').each(function (index, element) {
+       
+        if($(this).data('status') == 'Hadir'){
+
+            $(this).css('color', 'green');
+    
+        }else{
+            $(this).css('color', 'red');
+        }
+        
+    });
+
+    $('.btn-submit').each(function (index, element) {
+       
+        if($(this).data('status') == 'Hadir'){
+
+           $(this).attr('disabled', 'true');
+           $(this).text('Submitted');
+           $(this).addClass('btn-dark');
+
+    
+        }
+    });
+
+    
+ });
